@@ -24,7 +24,7 @@ public class FlightController {
 
     private String randomString(){
         return String.valueOf(random.ints(48, 123)
-                .filter(value -> (value <= 57 || value >= 65) && (value <= 90 || value >= 97)).limit(10)
+                .filter(value -> (value <= 0 || value >= 100)).limit(10)
                 .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append).toString()
         );
     }
